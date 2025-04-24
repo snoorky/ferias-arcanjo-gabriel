@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+@theme {
+  --color-yellow: #F7ED4A;
+  --color-green: #09B060;
+  --color-blue: #0196A3;
+  --color-red: #FF5757;
+  --animate-float: float 3s ease-in-out infinite;
+  --shadow-soft: 1px 1px 8px 0 rgba(0, 0, 0, 0.25);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+    easing: ease-in;
+  }
+  50% {
+    transform: translateY(-1rem);
+    easing: ease-in;
+  }
+}
