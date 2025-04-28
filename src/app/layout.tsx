@@ -55,8 +55,11 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className={`${inter} antialiased`}>
+    <html lang="pt-br">
+      <head>
+        <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+      </head>
+      <body className={`${inter.className} antialiased`}>
         {children} <SpeedInsights />
       </body>
     </html>
