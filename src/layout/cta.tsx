@@ -27,11 +27,12 @@ export default function CallToAction() {
         </p>
       </div>
       <Image
-        src={"/cta.png"}
+        src={"/cta.webp"}
         alt="crianças felizes"
         width={720}
         height={720}
         className="absolute right-20 top-10"
+        loading="lazy"
       />
     </div>
   );

@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <div
       className="h-full w-full bg-cover bg-center"
-      style={{ backgroundImage: "url('/banner.jpg')" }}
+      style={{ backgroundImage: "url('/banner.webp')" }}
     >
       <div className="relative h-full w-full bg-black/50 px-50">
         <Image

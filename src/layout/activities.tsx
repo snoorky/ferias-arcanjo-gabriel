@@ -213,6 +213,7 @@ export default function Activities() {
                     alt={item.title}
                     width={40}
                     height={40}
+                    loading="lazy"
                   />
                   <h3 className="font-semibold mt-2">{item.title}</h3>
                   <p className="">{item.description}</p>
