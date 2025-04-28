@@ -1,4 +1,6 @@
-"use client"
+"use client";
+
+import Image from "next/image";
 
 const photos = [
   { src: "/images/01.jpg", width: 1, height: 1 },
@@ -14,29 +16,30 @@ const photos = [
   { src: "/images/11.jpg", width: 3, height: 2 },
   { src: "/images/12.jpg", width: 3, height: 2 },
   { src: "/images/13.jpg", width: 3, height: 2 },
-]
+];
 
 export function JustifiedGallery() {
-  const rowHeight = 220
+  const rowHeight = 220;
 
   return (
     <div className="flex flex-col px-4">
       <div className="flex flex-wrap gap-4 justify-center">
         {photos.map((photo, index) => {
-          const ratio = photo.width / photo.height
-          const width = rowHeight * ratio
+          const ratio = photo.width / photo.height;
+          const width = rowHeight * ratio;
 
           return (
-            <img
+            <Image
               key={index}
               src={photo.src}
-              style={{ width: `${width}px`, height: `${rowHeight}px` }}
-              className="object-cover rounded-xl shadow-soft"
+              width={width}
+              height={rowHeight}
               alt={`Image ${index}`}
+              className="object-cover rounded-xl shadow-soft"
             />
-          )
+          );
         })}
       </div>
     </div>
-  )
+  );
 }
