@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 const photos = [
@@ -34,6 +36,8 @@ export function JustifiedGallery() {
               height={rowHeight}
               alt={`Image ${index}`}
               className="object-cover rounded-xl shadow-soft"
+              layout="intrinsic"
+              loading="lazy"
             />
           );
         })}
