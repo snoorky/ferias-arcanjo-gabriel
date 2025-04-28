@@ -80,7 +80,7 @@ export function FAQ() {
               className="w-full flex justify-between items-center p-4"
               onClick={() => toggleQuestion(index)}
             >
-              <h5 className={`font-semibold`}>{item.question}</h5>
+              <p className={`font-semibold`}>{item.question}</p>
               {arrow(isOpen)}
             </button>
             {isOpen && (

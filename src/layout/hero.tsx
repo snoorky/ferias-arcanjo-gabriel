@@ -13,9 +13,10 @@ export default function Hero() {
         <Image
           src="/logo.png"
           width={210}
-          height={150}
-          alt="logo"
+          height={148}
+          alt="logo do Colégio Arcanjo Gabriel"
           className="mb-28"
+          loading="lazy"
         />
         <div className="text-center space-y-4 flex flex-col items-center pb-56">
           <h1 className="text-yellow text-6xl">
@@ -31,7 +32,7 @@ export default function Hero() {
         </div>
         <Countdown />
         <Image
-          src={"/whatsapp.avif"}
+          src="/whatsapp.avif"
           width={80}
           height={80}
           className="fixed bottom-10 right-10"

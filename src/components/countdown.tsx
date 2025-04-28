@@ -25,16 +25,19 @@ function calculateTimeLeft(targetDate: Date) {
 
 export function Countdown() {
   const targetDate = useMemo(() => new Date("2025-06-01T00:00:00"), []);
-
-  const [timeLeft, setTimeLeft] = useState(() => calculateTimeLeft(targetDate));
+  const [timeLeft, setTimeLeft] = useState<null | ReturnType<
+    typeof calculateTimeLeft
+  >>(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setTimeLeft(calculateTimeLeft(targetDate));
-    }, 1000);
+    const update = () => setTimeLeft(calculateTimeLeft(targetDate));
 
+    update();
+    const interval = setInterval(update, 1000);
     return () => clearInterval(interval);
   }, [targetDate]);
+
+  if (!timeLeft) return null;
 
   const timeUnits = [
     { label: "dias", value: timeLeft.days },
@@ -57,9 +60,9 @@ export function Countdown() {
             key={index}
             className="w-full shadow-soft rounded-xl flex flex-col items-center justify-center space-y-2 py-4"
           >
-            <h4 className="text-blue font-bold text-4xl">
+            <p className="text-blue font-bold text-4xl">
               {String(unit.value).padStart(2, "0")}
-            </h4>
+            </p>
             <hr className="w-1/2 border-t-2 border-blue" />
             <p>{unit.label}</p>
           </div>
