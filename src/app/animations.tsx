@@ -560,3 +560,93 @@ export function FAQAnimation() {
 
   return null;
 }
+
+export function CTAAnimation() {
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".limited", {
+        opacity: 0,
+        x: -100,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: ".limited",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".limited", {
+        y: -8,
+        duration: 1.5,
+        delay: 1.5,
+        ease: "sine.out",
+        yoyo: true,
+        repeat: -1,
+      });
+
+      gsap.from(".title", {
+        opacity: 0,
+        x: -100,
+        duration: 1.5,
+        delay: 0.3,
+        scrollTrigger: {
+          trigger: ".title",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".paragraph1", {
+        opacity: 0,
+        x: -100,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: ".paragraph1",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".paragraph2", {
+        opacity: 0,
+        x: -100,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: ".paragraph2",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".paragraph3", {
+        opacity: 0,
+        x: -100,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: ".paragraph3",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".button", {
+        opacity: 0,
+        x: -100,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: ".button",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".footerline", {
+        opacity: 0,
+        x: -100,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: ".footerline",
+          start: "top bottom",
+        },
+      });
+    }, "#cta");
+
+    return () => ctx.revert();
+  }, []);
+
+  return null;
+}
