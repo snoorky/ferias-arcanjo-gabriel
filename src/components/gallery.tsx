@@ -35,7 +35,7 @@ export function JustifiedGallery() {
               width={width}
               height={rowHeight}
               alt={`Image ${index}`}
-              className="object-cover rounded-xl shadow-soft"
+              className={`object-cover rounded-xl shadow-soft item${index}`}
               layout="intrinsic"
               loading="lazy"
             />

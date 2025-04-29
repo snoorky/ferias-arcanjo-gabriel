@@ -215,13 +215,215 @@ export function ActivitiesAnimation() {
         opacity: 0,
         y: 100,
         duration: 1.5,
-        delay: 1.3,
         scrollTrigger: {
           trigger: ".button",
           start: "top bottom",
         },
       });
     }, "#activities");
+
+    return () => ctx.revert();
+  }, []);
+
+  return null;
+}
+
+export function AboutAnimation() {
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".title", {
+        opacity: 0,
+        x: 100,
+        duration: 1.7,
+        scrollTrigger: {
+          trigger: ".title",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".subtitle", {
+        opacity: 0,
+        x: 100,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: ".subtitle",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".content", {
+        opacity: 0,
+        x: 100,
+        duration: 1.9,
+        scrollTrigger: {
+          trigger: ".content",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".video", {
+        opacity: 0,
+        x: -100,
+        duration: 1.9,
+        scrollTrigger: {
+          trigger: ".video",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".titleGallery", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: ".titleGallery",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item0", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        delay: 0,
+        scrollTrigger: {
+          trigger: ".item0",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item1", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        delay: 0.3,
+        scrollTrigger: {
+          trigger: ".item1",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item2", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        delay: 0.6,
+        scrollTrigger: {
+          trigger: ".item2",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item3", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        delay: 0.9,
+        scrollTrigger: {
+          trigger: ".item3",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item4", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        delay: 1.2,
+        scrollTrigger: {
+          trigger: ".item4",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item5", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        delay: 0,
+        scrollTrigger: {
+          trigger: ".item5",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item6", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        delay: 0.3,
+        scrollTrigger: {
+          trigger: ".item6",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item7", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        delay: 0.6,
+        scrollTrigger: {
+          trigger: ".item7",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item8", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        delay: 0.9,
+        scrollTrigger: {
+          trigger: ".item8",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item9", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        delay: 0,
+        scrollTrigger: {
+          trigger: ".item9",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item10", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        delay: 0.3,
+        scrollTrigger: {
+          trigger: ".item10",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item11", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        delay: 0.6,
+        scrollTrigger: {
+          trigger: ".item11",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item12", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        delay: 0.9,
+        scrollTrigger: {
+          trigger: ".item12",
+          start: "top bottom",
+        },
+      });
+    }, "#about");
 
     return () => ctx.revert();
   }, []);
