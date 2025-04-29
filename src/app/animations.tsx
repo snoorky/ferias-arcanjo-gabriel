@@ -482,3 +482,81 @@ export function TestimonialAnimation() {
 
   return null;
 }
+
+export function FAQAnimation() {
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".title", {
+        opacity: 0,
+        y: 100,
+        duration: 1.7,
+        scrollTrigger: {
+          trigger: ".title",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item0", {
+        opacity: 0,
+        y: 100,
+        duration: 1.7,
+        scrollTrigger: {
+          trigger: ".item0",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item1", {
+        opacity: 0,
+        y: 100,
+        duration: 1.7,
+        scrollTrigger: {
+          trigger: ".item1",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item2", {
+        opacity: 0,
+        y: 100,
+        duration: 1.7,
+        scrollTrigger: {
+          trigger: ".item2",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item3", {
+        opacity: 0,
+        y: 100,
+        duration: 1.7,
+        scrollTrigger: {
+          trigger: ".item3",
+          start: "top bottom",
+        },
+      });
+      gsap.from(".item4", {
+        opacity: 0,
+        y: 100,
+        duration: 1.7,
+        scrollTrigger: {
+          trigger: ".item4",
+          start: "top bottom",
+        },
+      });
+      gsap.from(".item5", {
+        opacity: 0,
+        y: 100,
+        duration: 1.7,
+        scrollTrigger: {
+          trigger: ".item5",
+          start: "top bottom",
+        },
+      });
+    }, "#faq");
+
+    return () => ctx.revert();
+  }, []);
+
+  return null;
+}

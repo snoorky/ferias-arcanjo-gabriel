@@ -75,7 +75,7 @@ export function FAQ() {
         return (
           <div
             key={index}
-            className="border border-black/10 bg-white rounded-xl"
+            className={`border border-black/10 bg-white rounded-xl item${index}`}
           >
             <button
               className="w-full flex justify-between items-center p-4"
