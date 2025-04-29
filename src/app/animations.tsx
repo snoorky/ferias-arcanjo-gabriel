@@ -33,7 +33,7 @@ export function HeroAnimation() {
         duration: 1.5,
       });
 
-      gsap.from("button", {
+      gsap.from(".button", {
         opacity: 0,
         y: 100,
         duration: 1.5,
@@ -118,6 +118,110 @@ export function BenefitsAnimation() {
         },
       });
     }, "#benefits");
+
+    return () => ctx.revert();
+  }, []);
+
+  return null;
+}
+
+export function ActivitiesAnimation() {
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".title", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: ".title",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item0", {
+        opacity: 0,
+        x: -100,
+        duration: 1.5,
+        delay: 0,
+        scrollTrigger: {
+          trigger: ".item0",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item1", {
+        opacity: 0,
+        x: -100,
+        duration: 1.5,
+        delay: 0.3,
+        scrollTrigger: {
+          trigger: ".item0",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item2", {
+        opacity: 0,
+        x: -100,
+        duration: 1.5,
+        delay: 0.6,
+        scrollTrigger: {
+          trigger: ".item0",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item3", {
+        opacity: 0,
+        x: -100,
+        duration: 1.5,
+        delay: 0.9,
+        scrollTrigger: {
+          trigger: ".item0",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item4", {
+        opacity: 0,
+        x: -100,
+        duration: 1.5,
+        delay: 1.2,
+        scrollTrigger: {
+          trigger: ".item0",
+          start: "top bottom",
+        },
+      });
+
+      gsap.fromTo(
+        ".activities",
+        {
+          opacity: 0,
+          scale: 0,
+        },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 1.5,
+          delay: 1.2,
+          scrollTrigger: {
+            trigger: ".activities",
+            start: "top bottom",
+          },
+        }
+      );
+
+      gsap.from(".button", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        delay: 1.3,
+        scrollTrigger: {
+          trigger: ".button",
+          start: "top bottom",
+        },
+      });
+    }, "#activities");
 
     return () => ctx.revert();
   }, []);

@@ -1,5 +1,6 @@
 "use client";
 
+import { ActivitiesAnimation } from "@/app/animations";
 import { Button } from "@/components/button";
 import Image from "next/image";
 import { useState } from "react";
@@ -174,8 +175,11 @@ export default function Activities() {
   const selectedItems = weeks[selectedWeek].items;
 
   return (
-    <div className="w-screen px-50 py-24 space-y-12 flex flex-col items-center">
-      <h2 className="text-blue text-center font-bold text-5xl">
+    <div
+      className="w-screen px-50 py-24 space-y-12 flex flex-col items-center"
+      id="activities"
+    >
+      <h2 className="text-blue text-center font-bold text-5xl title">
         Programação Completa
       </h2>
       <div className="flex gap-10">
@@ -184,7 +188,7 @@ export default function Activities() {
             <button
               key={index}
               onClick={() => setSelectedWeek(index)}
-              className={`w-full py-2 px-4 rounded-xl shadow-soft text-blue ${
+              className={`w-full py-2 px-4 rounded-xl shadow-soft text-blue item${index} ${
                 selectedWeek === index && "bg-blue text-white"
               }`}
             >
@@ -193,7 +197,7 @@ export default function Activities() {
             </button>
           ))}
         </div>
-        <div className="w-4/5 flex">
+        <div className="w-4/5 flex activities">
           <div className="grid grid-cols-6 gap-4">
             {selectedItems.map((item, index) => {
               const items =
@@ -224,6 +228,7 @@ export default function Activities() {
         </div>
       </div>
       <Button />
+      <ActivitiesAnimation />
     </div>
   );
 }
