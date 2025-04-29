@@ -13,7 +13,7 @@ export default function Hero() {
         <Image
           src="/logo.png"
           width={210}
-          height={148}
+          height={150}
           alt="logo do Colégio Arcanjo Gabriel"
           className="mb-28"
           loading="lazy"
@@ -29,6 +29,10 @@ export default function Hero() {
           </p>
           <Limited />
           <Button />
+          <p className="text-sm font-bold text-white px-72">
+            Não é necessário estar matriculado no Colégio Arcanjo Gabriel para
+            participar do nosso curso de férias! Inscreva-se agora!
+          </p>
         </div>
         <Countdown />
         <Image

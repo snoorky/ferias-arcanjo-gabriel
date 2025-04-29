@@ -13,9 +13,7 @@ const arrow = (active: boolean) => (
       xmlns="http://www.w3.org/2000/svg"
       width="16"
       height="16"
-      className={`stroke-black/50 w-3 h-3 ${
-        active == true ? "-scale-y-100" : ""
-      }`}
+      className={`stroke-black/50 w-3 h-3 ${active && "-scale-y-100"}`}
       viewBox="0 0 16 16"
     >
       <path

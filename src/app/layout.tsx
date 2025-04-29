@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
@@ -49,8 +48,6 @@ export const metadata: Metadata = {
   },
 };
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -59,8 +56,9 @@ export default function RootLayout({
       <head>
         <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
       </head>
-      <body className={`${inter.className} antialiased`}>
-        {children} <SpeedInsights />
+      <body className="antialiased">
+        {children}
+        <SpeedInsights />
       </body>
     </html>
   );
