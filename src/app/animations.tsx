@@ -430,3 +430,55 @@ export function AboutAnimation() {
 
   return null;
 }
+
+export function TestimonialAnimation() {
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".title", {
+        opacity: 0,
+        y: 100,
+        duration: 1.7,
+        scrollTrigger: {
+          trigger: ".title",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item0", {
+        opacity: 0,
+        y: 100,
+        duration: 1.7,
+        scrollTrigger: {
+          trigger: ".item0",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item1", {
+        opacity: 0,
+        y: 100,
+        duration: 1.7,
+        delay: 0.3,
+        scrollTrigger: {
+          trigger: ".item1",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item2", {
+        opacity: 0,
+        y: 100,
+        duration: 1.7,
+        delay: 0.6,
+        scrollTrigger: {
+          trigger: ".item2",
+          start: "top bottom",
+        },
+      });
+    }, "#testimonial");
+
+    return () => ctx.revert();
+  }, []);
+
+  return null;
+}

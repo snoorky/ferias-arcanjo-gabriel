@@ -42,7 +42,7 @@ export function Testimonial() {
       {testimonial.map((item, index) => (
         <div
           key={index}
-          className="flex flex-col p-7 shadow-soft rounded-xl border-t-6 border-blue"
+          className={`flex flex-col p-7 shadow-soft rounded-xl border-t-6 border-blue item${index}`}
         >
           <div className="flex items-center justify-between mb-4">
             {quote()}
