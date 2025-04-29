@@ -53,7 +53,71 @@ export function HeroAnimation() {
         yoyo: true,
         repeat: -1,
       });
-    }, "#hero-section");
+    }, "#hero");
+
+    return () => ctx.revert();
+  }, []);
+
+  return null;
+}
+
+export function BenefitsAnimation() {
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".title", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: ".title",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item0", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        delay: 0,
+        scrollTrigger: {
+          trigger: ".item0",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item1", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        delay: 0.3,
+        scrollTrigger: {
+          trigger: ".item1",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item2", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        delay: 0.6,
+        scrollTrigger: {
+          trigger: ".item2",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".item3", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        delay: 0.9,
+        scrollTrigger: {
+          trigger: ".item3",
+          start: "top bottom",
+        },
+      });
+    }, "#benefits");
 
     return () => ctx.revert();
   }, []);

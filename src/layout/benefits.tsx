@@ -1,3 +1,5 @@
+import { BenefitsAnimation } from "@/app/animations";
+
 export default function Benefits() {
   const benefits = [
     {
@@ -23,15 +25,18 @@ export default function Benefits() {
   ];
 
   return (
-    <div className="w-screen bg-blue/15 px-50 pt-48 pb-24 flex flex-col justify-center space-y-14 text-center">
-      <h2 className="text-blue font-bold text-5xl">
+    <div
+      className="w-screen bg-blue/15 px-50 pt-48 pb-24 flex flex-col justify-center space-y-14 text-center"
+      id="benefits"
+    >
+      <h2 className="text-blue font-bold text-5xl title">
         Porque escolher nossas férias?
       </h2>
       <div className="flex gap-4">
         {benefits.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col p-4 items-center shadow-soft rounded-xl bg-white border-t-6 border-blue"
+            className={`flex flex-col p-4 items-center shadow-soft rounded-xl bg-white border-t-6 border-blue item${index}`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -47,6 +52,7 @@ export default function Benefits() {
           </div>
         ))}
       </div>
+      <BenefitsAnimation />
     </div>
   );
 }

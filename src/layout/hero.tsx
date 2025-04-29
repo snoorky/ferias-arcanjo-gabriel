@@ -10,10 +10,7 @@ export default function Hero() {
       className="h-full w-full bg-cover bg-center"
       style={{ backgroundImage: "url('/banner.webp')" }}
     >
-      <div
-        className="relative h-full w-full bg-black/50 px-50"
-        id="hero-section"
-      >
+      <div className="relative h-full w-full bg-black/50 px-50" id="hero">
         <Image
           src="/logo.png"
           width={210}
