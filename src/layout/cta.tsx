@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function CallToAction() {
   return (
     <section
-      className="responsive marginBlock pb-96 md:pb-[44rem] xl:pb-32 relative overflow-hidden"
+      className="responsive marginBlock pb-[26rem] md:pb-[44rem] xl:pb-32 relative overflow-hidden"
       id="cta"
     >
       <div className="flex flex-col items-center xl:items-start space-y-2 text-center xl:text-start xl:w-1/2">

@@ -48,15 +48,15 @@ const faqData = [
   },
   {
     question: "Quais são as opções de pagamento?",
-    answer: `Oferecemos diversas formas de pagamento: cartão de crédito, boleto bancário ou transferência. Tudo para facilitar a sua inscrição!`,
+    answer: `Oferecemos diversas formas de pagamento: <strong>cartão de crédito</strong>, <strong>boleto bancário</strong> ou <strong>transferência</strong>. Tudo para facilitar a sua inscrição!`,
   },
   {
     question: "As atividades são seguras?",
-    answer: `A segurança das crianças é nossa prioridade. Todas as atividades são acompanhadas por educadores qualificados e nossos espaços são preparados para garantir que as crianças possam brincar com tranquilidade. Além disso, seguimos todos os protocolos de segurança e higiene recomendados.`,
+    answer: `A segurança das crianças é nossa <strong>prioridade</strong>. Todas as atividades são <strong>acompanhadas</strong> por <strong>educadores qualificados</strong> e nossos espaços são preparados para garantir que as crianças possam <strong>brincar com tranquilidade</strong>. Além disso, seguimos todos os <strong>protocolos de segurança</strong> e <strong>higiene recomendados</strong>.`,
   },
   {
     question: "O que meu filho vai almoçar nas férias?",
-    answer: `Oferecemos uma alimentação balanceada, com opções saudáveis para as crianças, respeitando suas necessidades nutricionais e possíveis restrições alimentares. Se seu filho tiver alguma alergia ou dieta especial, basta nos informar na inscrição.`,
+    answer: `Oferecemos uma <strong>alimentação balanceada</strong>, com opções saudáveis para as crianças, respeitando suas necessidades <strong>nutricionais</strong> e possíveis <strong>restrições alimentares</strong>. Se seu filho tiver alguma alergia ou dieta especial, basta nos informar na inscrição.`,
   },
 ];
 

@@ -233,7 +233,7 @@ export function AboutAnimation() {
     const ctx = gsap.context(() => {
       gsap.from(".title", {
         opacity: 0,
-        x: 100,
+        y: 100,
         duration: 1.7,
         scrollTrigger: {
           trigger: ".title",
@@ -243,7 +243,7 @@ export function AboutAnimation() {
 
       gsap.from(".subtitle", {
         opacity: 0,
-        x: 100,
+        y: 100,
         duration: 1.5,
         scrollTrigger: {
           trigger: ".subtitle",
@@ -253,7 +253,7 @@ export function AboutAnimation() {
 
       gsap.from(".content", {
         opacity: 0,
-        x: 100,
+        y: 100,
         duration: 1.9,
         scrollTrigger: {
           trigger: ".content",
@@ -263,7 +263,7 @@ export function AboutAnimation() {
 
       gsap.from(".video", {
         opacity: 0,
-        x: -100,
+        y: 100,
         duration: 1.9,
         scrollTrigger: {
           trigger: ".video",
@@ -610,7 +610,7 @@ export function CTAAnimation() {
     const ctx = gsap.context(() => {
       gsap.from(".limited", {
         opacity: 0,
-        x: -100,
+        y: 100,
         duration: 1.5,
         scrollTrigger: {
           trigger: ".limited",
@@ -619,7 +619,7 @@ export function CTAAnimation() {
       });
 
       gsap.from(".limited", {
-        y: -8,
+        x: 6,
         duration: 1.5,
         delay: 1.5,
         ease: "sine.out",
@@ -629,7 +629,7 @@ export function CTAAnimation() {
 
       gsap.from(".title", {
         opacity: 0,
-        x: -100,
+        y: 100,
         duration: 1.5,
         delay: 0.3,
         scrollTrigger: {
@@ -640,7 +640,7 @@ export function CTAAnimation() {
 
       gsap.from(".paragraph1", {
         opacity: 0,
-        x: -100,
+        y: 100,
         duration: 1.5,
         scrollTrigger: {
           trigger: ".paragraph1",
@@ -650,7 +650,7 @@ export function CTAAnimation() {
 
       gsap.from(".paragraph2", {
         opacity: 0,
-        x: -100,
+        y: 100,
         duration: 1.5,
         scrollTrigger: {
           trigger: ".paragraph2",
@@ -660,7 +660,7 @@ export function CTAAnimation() {
 
       gsap.from(".paragraph3", {
         opacity: 0,
-        x: -100,
+        y: 100,
         duration: 1.5,
         scrollTrigger: {
           trigger: ".paragraph3",
@@ -670,7 +670,7 @@ export function CTAAnimation() {
 
       gsap.from(".button", {
         opacity: 0,
-        x: -100,
+        y: 100,
         duration: 1.5,
         scrollTrigger: {
           trigger: ".button",
@@ -680,7 +680,7 @@ export function CTAAnimation() {
 
       gsap.from(".footerline", {
         opacity: 0,
-        x: -100,
+        y: 100,
         duration: 1.5,
         scrollTrigger: {
           trigger: ".footerline",

@@ -13,8 +13,8 @@ export default function About() {
           <Video />
         </div>
         <div className="space-y-2 xl:w-2/3 xl:space-y-4 xl:text-start">
-          <h4 className="subtitle font-bold -mb-1">Colégio</h4>
-          <h2 className="title">Arcanjo Gabriel</h2>
+          <h4 className="subtitle font-bold -mb-1 text-green">Colégio</h4>
+          <h2 className="title text-blue">Arcanjo Gabriel</h2>
           <div className="content space-y-2 xl:space-y-4">
             <p>
               O Colégio Arcanjo Gabriel é especializado no atendimento exclusivo

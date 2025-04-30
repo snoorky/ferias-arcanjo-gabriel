@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { Stars } from "./stars";
 
 const quote = () => (
@@ -12,48 +15,83 @@ const quote = () => (
   </svg>
 );
 
-const testimonial = [
+const testimonials = [
   {
-    name: "Juliana",
-    role: "Mãe do Luca",
+    name: "Júlia Lara Marques",
     quote:
-      "Nunca vi meu filho tão empolgado para ir à escola nas férias! Ele ama tudo!",
-    rate: 4.5,
+      "Super atenciosas, desde que minha filha começou, ela evoluiu muito...",
+    rate: 5,
   },
   {
-    name: "Carlos",
-    role: "Pai da Manu",
-    quote:
-      "As atividades foram incríveis e organizadas. A gente se sente seguro e acolhido.",
-    rate: 3.5,
+    name: "Ana Paula Rodrigues dos Santos",
+    quote: "Ótima escola.. minha filha ama e eu também...",
+    rate: 5,
   },
   {
-    name: "Márcia",
-    role: "Mãe da Laura",
-    quote:
-      "O programa de férias é completo e as crianças se divertem de verdade!",
-    rate: 2,
+    name: "Ariene Teixeira",
+    quote: "Uma escola acolhedora, humanizada...",
+    rate: 5,
+  },
+  {
+    name: "Ana Fogaça",
+    quote: "Não há palavras para agradecer o cuidado...",
+    rate: 5,
+  },
+  {
+    name: "Natalia Ismirim",
+    quote: "Escola de ambiente acolhedor !! 🥰",
+    rate: 5,
   },
 ];
 
 export function Testimonial() {
+  const [startIndex, setStartIndex] = useState(0);
+  const visibleCount = 3;
+  const total = testimonials.length;
+
+  const handleNext = () => {
+    setStartIndex((prev) => (prev + 1) % total);
+  };
+
+  const handlePrev = () => {
+    setStartIndex((prev) => (prev - 1 + total) % total);
+  };
+
+  const getVisibleTestimonials = () => {
+    return Array.from({ length: visibleCount }, (_, i) => {
+      const index = (startIndex + i) % total;
+      return testimonials[index];
+    });
+  };
+
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      {testimonial.map((item, index) => (
-        <div
-          key={index}
-          className={`p-4 shadow-soft rounded-xl border-t-6 border-blue item${index} space-y-4`}
-          // className={`flex flex-col p-7`}
-        >
-          <div className="flex items-center justify-between">
-            {quote()} <Stars rating={item.rate} />
+    <div className="relative px-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-500 ease-in-out">
+        {getVisibleTestimonials().map((item, index) => (
+          <div
+            key={index}
+            className="p-4 shadow-soft rounded-xl border-t-6 border-blue space-y-4 bg-white"
+          >
+            <div className="flex items-center justify-between">
+              {quote()} <Stars rating={item.rate} />
+            </div>
+            <p className="text-gray-600 italic">“{item.quote}”</p>
+            <p className="text-blue font-semibold">- {item.name}</p>
           </div>
-          <p className="text-gray-600 italic">“{item.quote}”</p>
-          <p className="text-blue font-semibold">
-            - {item.name}, {item.role}
-          </p>
-        </div>
-      ))}
+        ))}
+      </div>
+      <button
+        onClick={handlePrev}
+        className="absolute -left-5 top-1/2 -translate-y-1/2 text-blue p-3 bg-white shadow-soft rounded-full hover:bg-blue/10"
+      >
+        ◀
+      </button>
+      <button
+        onClick={handleNext}
+        className="absolute -right-5 top-1/2 -translate-y-1/2 text-blue p-3 bg-white shadow-soft rounded-full hover:bg-blue/10"
+      >
+        ▶
+      </button>
     </div>
   );
 }
