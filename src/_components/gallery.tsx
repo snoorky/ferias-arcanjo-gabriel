@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 const photos = [
   { src: "/images/01.jpg", width: 1, height: 1 },
   { src: "/images/02.jpg", width: 3, height: 2 },
-  { src: "/images/03.jpg", width: 3, height: 2 },
+  { src: "/images/03.png", width: 3, height: 2 },
   { src: "/images/04.jpg", width: 2, height: 3 },
   { src: "/images/05.jpg", width: 2, height: 3 },
   { src: "/images/13.jpg", width: 3, height: 2 },
