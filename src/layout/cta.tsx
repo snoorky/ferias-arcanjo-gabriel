@@ -1,19 +1,17 @@
 import { CTAAnimation } from "@/app/animations";
-import { Button } from "@/components/button";
-import { Limited } from "@/components/limited";
+import { Button } from "@/_components/button";
+import { Limited } from "@/_components/limited";
 import Image from "next/image";
 
 export default function CallToAction() {
   return (
-    <div
-      className="w-screen px-50 py-24 flex relative overflow-hidden"
+    <section
+      className="responsive marginBlock pb-96 md:pb-[44rem] xl:pb-32 relative overflow-hidden"
       id="cta"
     >
-      <div className="flex flex-col items-start w-1/2 pr-20 space-y-4">
+      <div className="flex flex-col items-center xl:items-start space-y-2 text-center xl:text-start xl:w-1/2">
         <Limited />
-        <h2 className="font-bold text-5xl title">
-          Garanta a vaga do seu filho!
-        </h2>
+        <h2 className="title">Garanta a vaga do seu filho!</h2>
         <p className="paragraph1">
           Cada atividade do nosso programa de férias foi pensada com muito
           cuidado para estimular o desenvolvimento emocional, social e criativo
@@ -23,24 +21,24 @@ export default function CallToAction() {
           Aqui, elas aprendem brincando, fazem amigos, se sentem acolhidas e
           vivem momentos mágicos todos os dias.
         </p>
-        <p className="paragraph3">
+        <p className="paragraph3 lg:mb-8">
           Garanta a vaga do seu filho e proporcione a ele uma experiência de
           férias rica em afeto e aprendizado.
         </p>
         <Button />
-        <p className="text-sm footerline">
+        <p className="footerline text-sm">
           * Inscrições até 20/06/2025 ou enquanto houver vagas
         </p>
       </div>
       <Image
         src={"/cta.webp"}
         alt="crianças felizes"
-        width={720}
-        height={720}
-        className="absolute right-20 top-10 ctaImage"
+        width={710}
+        height={710}
+        className="ctaImage absolute bottom-0 max-xl:left-1/2 max-xl:-translate-x-1/2 xl:right-10 xl:top-10"
         loading="lazy"
       />
       <CTAAnimation />
-    </div>
+    </section>
   );
 }

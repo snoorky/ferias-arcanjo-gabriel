@@ -55,7 +55,7 @@ const faqData = [
     answer: `A segurança das crianças é nossa prioridade. Todas as atividades são acompanhadas por educadores qualificados e nossos espaços são preparados para garantir que as crianças possam brincar com tranquilidade. Além disso, seguimos todos os protocolos de segurança e higiene recomendados.`,
   },
   {
-    question: "O que meu filho vai almoçar durante as férias?",
+    question: "O que meu filho vai almoçar nas férias?",
     answer: `Oferecemos uma alimentação balanceada, com opções saudáveis para as crianças, respeitando suas necessidades nutricionais e possíveis restrições alimentares. Se seu filho tiver alguma alergia ou dieta especial, basta nos informar na inscrição.`,
   },
 ];
@@ -68,7 +68,7 @@ export function FAQ() {
   };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="space-y-4">
       {faqData.map((item, index) => {
         const isOpen = openIndex === index;
 
@@ -81,7 +81,7 @@ export function FAQ() {
               className="w-full flex justify-between items-center p-4"
               onClick={() => toggleQuestion(index)}
             >
-              <p className={`font-semibold`}>{item.question}</p>
+              <p className="text-sm font-semibold">{item.question}</p>
               {isOpen == true ? minus() : plus()}
             </button>
             {isOpen && (

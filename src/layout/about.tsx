@@ -1,21 +1,21 @@
 import { AboutAnimation } from "@/app/animations";
-import { JustifiedGallery } from "@/components/gallery";
-import { Video } from "@/components/video";
+import { JustifiedGallery } from "@/_components/gallery";
+import { Video } from "@/_components/video";
 
 export default function About() {
   return (
-    <div
-      className="w-screen bg-blue/15 py-24 flex flex-col justify-center gap-24"
+    <section
+      className="responsive marginBlock bg-blue/15 flex flex-col gap-8 text-center"
       id="about"
     >
-      <div className="flex items-center justify-between gap-8 px-50">
-        <div className="w-full h-full rounded-xl overflow-hidden video">
+      <div className="flex flex-col xl:flex-row gap-8">
+        <div className="video rounded-xl overflow-hidden w-full h-full">
           <Video />
         </div>
-        <div className="w-2/3 space-y-4">
-          <h4 className="text-lg font-bold -mb-1 subtitle">Colégio</h4>
-          <h2 className="font-bold text-5xl title">Arcanjo Gabriel</h2>
-          <div className="content space-y-4">
+        <div className="space-y-2 xl:w-2/3 xl:space-y-4 xl:text-start">
+          <h4 className="subtitle font-bold -mb-1">Colégio</h4>
+          <h2 className="title">Arcanjo Gabriel</h2>
+          <div className="content space-y-2 xl:space-y-4">
             <p>
               O Colégio Arcanjo Gabriel é especializado no atendimento exclusivo
               à educação infantil. Atendemos crianças na faixa de 0 a 5 anos,
@@ -30,11 +30,11 @@ export default function About() {
           </div>
         </div>
       </div>
-      <h2 className="text-center text-blue font-bold text-5xl titleGallery">
+      <h2 className="titleGallery font-bold text-blue">
         Quem já viveu, amou, e quer voltar!
       </h2>
       <JustifiedGallery />
       <AboutAnimation />
-    </div>
+    </section>
   );
 }

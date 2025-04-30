@@ -7,3 +7,25 @@
   --color-red: #ff5757;
   --shadow-soft: 1px 1px 8px 0 rgba(0, 0, 0, 0.25);
 }
+
+@layer components {
+  h1 {
+    @apply text-2xl md:text-4xl lg:text-5xl xl:text-6xl;
+  }
+
+  h2 {
+    @apply text-xl md:text-3xl lg:text-4xl font-bold;
+  }
+
+  .responsive {
+    @apply w-screen px-8 md:px-16 lg:px-32 xl:px-50;
+  }
+
+  .marginBlock {
+    @apply py-12 xl:py-24;
+  }
+
+  .spacingTitle {
+    @apply space-y-7 xl:space-y-14;
+  }
+}

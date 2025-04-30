@@ -1,9 +1,9 @@
 "use client";
 
 import { ActivitiesAnimation } from "@/app/animations";
-import { Button } from "@/components/button";
+import { Button } from "@/_components/button";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Activities() {
   const weeks = [
@@ -172,36 +172,59 @@ export default function Activities() {
   ];
 
   const [selectedWeek, setSelectedWeek] = useState<number>(0);
+  const [activityHeight, setActivityHeight] = useState("");
   const selectedItems = weeks[selectedWeek].items;
 
+  useEffect(() => {
+    const updateActivityHeight = () => {
+      if (window.innerWidth >= 1280) {
+        setActivityHeight("xl");
+      } else {
+        setActivityHeight("sm");
+      }
+    };
+
+    updateActivityHeight();
+    window.addEventListener("resize", updateActivityHeight);
+    return () => {
+      window.removeEventListener("resize", updateActivityHeight);
+    };
+  }, []);
+
   return (
-    <div
-      className="w-screen px-50 py-24 space-y-12 flex flex-col items-center"
+    <section
+      className="responsive marginBlock spacingTitle flex flex-col xl:items-center"
       id="activities"
     >
-      <h2 className="text-blue text-center font-bold text-5xl title">
-        Programação Completa
-      </h2>
-      <div className="flex gap-10">
-        <div className="w-1/5 space-y-4">
-          {weeks.map((week, index) => (
-            <button
-              key={index}
-              onClick={() => setSelectedWeek(index)}
-              className={`w-full py-2 px-4 rounded-xl shadow-soft text-blue item${index} ${
-                selectedWeek === index && "bg-blue text-white"
-              }`}
-            >
-              <h3 className="font-semibold">{week.title}</h3>
-              <p className="text-sm">{week.dates}</p>
-            </button>
-          ))}
+      <h2 className="title text-center text-blue">Programação Completa</h2>
+      <div className="flex flex-col lg:flex-row gap-8">
+        <div className="space-y-2 lg:w-1/5">
+          {weeks.map((week, index) => {
+            const container = selectedWeek === index && "bg-blue text-white";
+
+            return (
+              <button
+                key={index}
+                onClick={() => setSelectedWeek(index)}
+                className={`w-full py-2 px-4 rounded-xl shadow-soft text-blue item${index} ${container}`}
+              >
+                <h3 className="font-semibold">{week.title}</h3>
+                <p className="text-sm md:text-md">{week.dates}</p>
+              </button>
+            );
+          })}
         </div>
-        <div className="w-4/5 flex activities">
+        <div className="activities flex lg:w-4/5">
           <div className="grid grid-cols-6 gap-4">
             {selectedItems.map((item, index) => {
               const items =
-                selectedItems.length === 4
+                activityHeight === "sm"
+                  ? selectedItems.length === 4
+                    ? "col-span-3"
+                    : index <= 3
+                    ? "col-span-3"
+                    : "col-span-6"
+                  : selectedItems.length === 4
                   ? "col-span-3"
                   : index < 3
                   ? "col-span-2"
@@ -210,7 +233,7 @@ export default function Activities() {
               return (
                 <div
                   key={index}
-                  className={`p-4 rounded-xl shadow-soft flex flex-col items-center text-center ${items}`}
+                  className={`p-4 rounded-xl shadow-soft ${items}`}
                 >
                   <Image
                     src={`/icons/${item.icon}.png`}
@@ -220,7 +243,7 @@ export default function Activities() {
                     loading="lazy"
                   />
                   <h3 className="font-semibold mt-2">{item.title}</h3>
-                  <p className="">{item.description}</p>
+                  <p className="text-[12px] md:text-md">{item.description}</p>
                 </div>
               );
             })}
@@ -229,6 +252,6 @@ export default function Activities() {
       </div>
       <Button />
       <ActivitiesAnimation />
-    </div>
+    </section>
   );
 }

@@ -1,14 +1,15 @@
 import { TestimonialAnimation } from "@/app/animations";
-import { Testimonial } from "@/components/testimonial";
+import { Testimonial } from "@/_components/testimonial";
 
 export default function Testimonials() {
   return (
-    <div className="w-screen px-50 py-24 space-y-12" id="testimonial">
-      <h2 className="text-blue text-center font-bold text-5xl title">
+    <section className="responsive marginBlock spacingTitle" id="testimonial">
+      {/* <div className="space-y-12" id="testimonial"> */}
+      <h2 className="title text-blue text-center">
         Olha o que outros papais e mamães acharam da nossa escolinha
       </h2>
       <Testimonial />
       <TestimonialAnimation />
-    </div>
+    </section>
   );
 }

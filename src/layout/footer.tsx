@@ -24,13 +24,13 @@ const instagram = () => (
 
 export default function Footer() {
   return (
-    <div className="flex items-center justify-between px-50 py-6 bg-blue text-white">
+    <footer className="responsive flex items-center md:justify-between py-6 bg-blue text-white gap-4">
       <p className="font-semibold">
         2025 © Colégio Arcanjo Gabriel. Todos os direitos reservados
       </p>
       <div className="flex gap-4">
         {facebook()} {instagram()}
       </div>
-    </div>
+    </footer>
   );
 }

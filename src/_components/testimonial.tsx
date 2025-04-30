@@ -15,21 +15,21 @@ const quote = () => (
 const testimonial = [
   {
     name: "Juliana",
-    role: "Mãe do Luca (4 anos)",
+    role: "Mãe do Luca",
     quote:
       "Nunca vi meu filho tão empolgado para ir à escola nas férias! Ele ama tudo!",
     rate: 4.5,
   },
   {
     name: "Carlos",
-    role: "Pai da Manu (6 anos)",
+    role: "Pai da Manu",
     quote:
       "As atividades foram incríveis e organizadas. A gente se sente seguro e acolhido.",
     rate: 3.5,
   },
   {
     name: "Márcia",
-    role: "Mãe da Laura (7 anos)",
+    role: "Mãe da Laura",
     quote:
       "O programa de férias é completo e as crianças se divertem de verdade!",
     rate: 2,
@@ -38,17 +38,17 @@ const testimonial = [
 
 export function Testimonial() {
   return (
-    <div className="grid md:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
       {testimonial.map((item, index) => (
         <div
           key={index}
-          className={`flex flex-col p-7 shadow-soft rounded-xl border-t-6 border-blue item${index}`}
+          className={`p-4 shadow-soft rounded-xl border-t-6 border-blue item${index} space-y-4`}
+          // className={`flex flex-col p-7`}
         >
-          <div className="flex items-center justify-between mb-4">
-            {quote()}
-            <Stars rating={item.rate} />
+          <div className="flex items-center justify-between">
+            {quote()} <Stars rating={item.rate} />
           </div>
-          <p className="text-gray-600 italic mb-4">“{item.quote}”</p>
+          <p className="text-gray-600 italic">“{item.quote}”</p>
           <p className="text-blue font-semibold">
             - {item.name}, {item.role}
           </p>
