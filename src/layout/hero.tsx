@@ -3,6 +3,7 @@ import { Button } from "../_components/button";
 import { Limited } from "../_components/limited";
 import { Countdown } from "@/_components/countdown";
 import { HeroAnimation } from "@/app/animations";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -32,13 +33,18 @@ export default function Hero() {
         </div>
         <Countdown />
         <HeroAnimation />
-        <Image
-          src="/whatsapp.avif"
-          width={80}
-          height={80}
-          className="z-1 fixed bottom-15 right-5"
-          alt="ícone do WhatsApp para entrar em contato"
-        />
+        <Link
+          href="https://api.whatsapp.com/send?phone=5515997096890&text=Olá,+quero+a+vaga+do+eu+filho+no+programa+de+férias"
+          target="_blank"
+        >
+          <Image
+            src="/whatsapp.avif"
+            width={80}
+            height={80}
+            className="z-1 fixed bottom-15 right-5"
+            alt="ícone do WhatsApp para entrar em contato"
+          />
+        </Link>
       </div>
     </main>
   );

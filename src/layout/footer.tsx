@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const facebook = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +31,15 @@ export default function Footer() {
         2025 © Colégio Arcanjo Gabriel. Todos os direitos reservados
       </p>
       <div className="flex gap-4">
-        {facebook()} {instagram()}
+        <Link href="http://facebook.com/colegioarcanjogabriel" target="_blank">
+          {facebook()}
+        </Link>
+        <Link
+          href="https://www.instagram.com/colegioarcanjogabriel"
+          target="_blank"
+        >
+          {instagram()}
+        </Link>
       </div>
     </footer>
   );
