@@ -27,12 +27,6 @@ export function HeroAnimation() {
         duration: 1.5,
       });
 
-      gsap.from(".warning", {
-        opacity: 0,
-        y: 100,
-        duration: 1.5,
-      });
-
       gsap.from(".button", {
         opacity: 0,
         y: 100,

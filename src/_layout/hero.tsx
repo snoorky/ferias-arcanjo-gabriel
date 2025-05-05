@@ -15,7 +15,7 @@ export default function Hero() {
         <div className="logo relative w-36 lg:w-52 xl:w-56 h-24 lg:h-36 xl:h-40">
           <Image src="/logo.png" alt="Logo" fill className="object-contain" />
         </div>
-        <div className="flex flex-col items-center text-center mt-8 pb-30 space-y-2 xl:space-y-8">
+        <div className="flex flex-col items-center text-center mt-8 pb-40 space-y-2 xl:space-y-8">
           <h1 className="title text-yellow">
             Onde cada risada vira lembrança e cada brincadeira, um aprendizado
           </h1>
@@ -26,11 +26,6 @@ export default function Hero() {
           </p>
           <Limited />
           <Button />
-          <p className="warning font-semibold text-white mt-8 text-sm md:text-lg lg:px-52">
-            <strong className="text-green">Desconto especial:</strong> Ganhe 30%
-            de desconto no curso de férias ao fazer a matrícula ou contratar o
-            contraturno! <strong>Oferta válida por tempo limitado.</strong>
-          </p>
         </div>
         <Countdown />
         <HeroAnimation />
