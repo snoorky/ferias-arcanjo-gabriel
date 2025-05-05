@@ -1,3 +1,4 @@
+import Registration from "@/_components/registration";
 import { BenefitsAnimation } from "@/app/animations";
 
 export default function Benefits() {
@@ -54,6 +55,7 @@ export default function Benefits() {
           </div>
         ))}
       </div>
+      <Registration />
       <BenefitsAnimation />
     </section>
   );

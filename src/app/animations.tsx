@@ -117,6 +117,16 @@ export function BenefitsAnimation() {
           start: "top bottom",
         },
       });
+
+      gsap.from(".registration", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: ".registration",
+          start: "top bottom",
+        },
+      });
     }, "#benefits");
 
     return () => ctx.revert();
@@ -134,6 +144,16 @@ export function ActivitiesAnimation() {
         duration: 1.5,
         scrollTrigger: {
           trigger: ".title",
+          start: "top bottom",
+        },
+      });
+
+      gsap.from(".categories", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: ".categories",
           start: "top bottom",
         },
       });

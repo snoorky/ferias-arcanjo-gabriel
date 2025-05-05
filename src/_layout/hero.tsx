@@ -22,13 +22,14 @@ export default function Hero() {
           <p className="paragraph font-semibold text-white mb-8 md:text-lg md:px-12 lg:px-16">
             Férias especiais no Colégio Arcanjo Gabriel para crianças de 3 a 10
             anos, com um mês inteiro de amor, diversão e descobertas que vão
-            marcar a infância do jeitinho que ela merece
+            marcar a infância do jeitinho que ela merece.
           </p>
           <Limited />
           <Button />
           <p className="warning font-semibold text-white mt-8 text-sm md:text-lg lg:px-52">
-            Não é necessário estar matriculado no Colégio Arcanjo Gabriel para
-            participar do nosso curso de férias! Inscreva-se agora!
+            <strong className="text-green">Desconto especial:</strong> Ganhe 30%
+            de desconto no curso de férias ao fazer a matrícula ou contratar o
+            contraturno! <strong>Oferta válida por tempo limitado.</strong>
           </p>
         </div>
         <Countdown />
