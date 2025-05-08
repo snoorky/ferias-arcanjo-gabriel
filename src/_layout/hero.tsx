@@ -19,7 +19,7 @@ export default function Hero() {
           <h1 className="title text-yellow">
             Onde cada risada vira lembrança e cada brincadeira, um aprendizado
           </h1>
-          <p className="paragraph font-semibold text-white mb-8 md:text-lg md:px-12 lg:px-16">
+          <p className="paragraph font-semibold text-white mt-3 mb-8 md:text-lg md:px-12 lg:px-16">
             Férias especiais no Colégio Arcanjo Gabriel para crianças de 0 a 10
             anos, com um mês inteiro de amor, diversão e descobertas que vão
             marcar a infância do jeitinho que ela merece.

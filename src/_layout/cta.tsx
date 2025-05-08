@@ -11,7 +11,7 @@ export default function CallToAction() {
     >
       <div className="flex flex-col items-center xl:items-start space-y-4 text-center xl:text-start xl:w-1/2">
         <Limited />
-        <h2 className="title">Garanta a vaga do seu filho!</h2>
+        <h2 className="title text-blue">Garanta a vaga do seu filho!</h2>
         <p className="paragraph mb-4">
           Cada atividade do nosso programa de férias foi pensada com muito
           cuidado para estimular o desenvolvimento emocional, social e criativo
