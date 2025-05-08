@@ -11,7 +11,7 @@ export default function Registration() {
         <h2 className="font-bold text-green">Desconto especial!</h2>
         <p className="text-lg leading-snug">
           Ganhe <span className="font-bold">30% de desconto</span> no curso de
-          férias na compra da matrícula contraturno!
+          férias na compra da matrícula ou contraturno!
         </p>
         <Link
           href={`https://api.whatsapp.com/send?phone=5515997096890&text=${text}`}

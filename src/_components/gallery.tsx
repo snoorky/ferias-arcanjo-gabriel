@@ -25,48 +25,74 @@ const photos = [
 
 export function JustifiedGallery() {
   const [rowHeight, setRowHeight] = useState(70);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const updateRowHeight = () => {
-      if (window.innerWidth >= 1280) {
+    const updateLayout = () => {
+      const width = window.innerWidth;
+      setIsMobile(width < 768);
+
+      if (width >= 1280) {
         setRowHeight(270);
-      } else if (window.innerWidth >= 1024) {
+      } else if (width >= 1024) {
         setRowHeight(150);
-      } else if (window.innerWidth >= 768) {
+      } else if (width >= 768) {
         setRowHeight(130);
       } else {
-        setRowHeight(70);
+        setRowHeight(180);
       }
     };
 
-    updateRowHeight();
-    window.addEventListener("resize", updateRowHeight);
-    return () => {
-      window.removeEventListener("resize", updateRowHeight);
-    };
+    updateLayout();
+    window.addEventListener("resize", updateLayout);
+    return () => window.removeEventListener("resize", updateLayout);
   }, []);
 
   return (
     <div className="xl:-mx-40">
-      <div className="flex flex-wrap gap-2 justify-between md">
-        {photos.map((photo, index) => {
-          const ratio = photo.width / photo.height;
-          const width = rowHeight * ratio;
+      {isMobile ? (
+        <div className="flex gap-2 overflow-x-auto flex-nowrap scroll-snap-x snap-x snap-mandatory px-4 py-2">
+          {photos.map((photo, index) => {
+            const ratio = photo.width / photo.height;
+            const width = rowHeight * ratio;
 
-          return (
-            <Image
-              key={index}
-              src={photo.src}
-              width={width}
-              height={rowHeight}
-              alt={`Image ${index}`}
-              className={`object-cover rounded-xl shadow-soft item${index}`}
-              layout="intrinsic"
-              loading="lazy"
-            />
-          );
-        })}
-      </div>
+            return (
+              <div
+                key={index}
+                className="relative rounded-xl shadow-soft overflow-hidden snap-center flex-shrink-0"
+                style={{ width: `${width}px`, height: `${rowHeight}px` }}
+              >
+                <Image
+                  src={photo.src}
+                  alt={`Image ${index}`}
+                  fill
+                  className="object-cover"
+                  loading="lazy"
+                />
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        <div className="flex flex-wrap gap-2 justify-between md">
+          {photos.map((photo, index) => {
+            const ratio = photo.width / photo.height;
+            const width = rowHeight * ratio;
+
+            return (
+              <Image
+                key={index}
+                src={photo.src}
+                width={width}
+                height={rowHeight}
+                alt={`Image ${index}`}
+                className="object-cover rounded-xl shadow-soft"
+                loading="lazy"
+              />
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }

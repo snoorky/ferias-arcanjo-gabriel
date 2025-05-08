@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Stars } from "./stars";
 
 const quote = () => (
@@ -46,8 +46,18 @@ const testimonials = [
 
 export function Testimonial() {
   const [startIndex, setStartIndex] = useState(0);
-  const visibleCount = 3;
+  const [visibleCount, setVisibleCount] = useState(3);
   const total = testimonials.length;
+
+  const handleResize = () => {
+    setVisibleCount(window.innerWidth < 768 ? 1 : 3);
+  };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleNext = () => {
     setStartIndex((prev) => (prev + 1) % total);
