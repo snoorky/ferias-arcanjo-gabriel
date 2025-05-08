@@ -5,7 +5,7 @@ import { Video } from "@/_components/video";
 export default function About() {
   return (
     <section
-      className="responsive marginBlock spacingTitle bg-blue/15 flex flex-col gap-8 text-center"
+      className="responsive marginBlock spacingTitle bg-blue/15 md:gap-4 lg:gap-8 flex flex-col text-center"
       id="about"
     >
       <div className="flex flex-col xl:flex-row gap-8">
