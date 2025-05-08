@@ -652,32 +652,12 @@ export function CTAAnimation() {
         },
       });
 
-      gsap.from(".paragraph1", {
+      gsap.from(".paragraph", {
         opacity: 0,
         y: 100,
         duration: 1.5,
         scrollTrigger: {
           trigger: ".paragraph1",
-          start: "top bottom",
-        },
-      });
-
-      gsap.from(".paragraph2", {
-        opacity: 0,
-        y: 100,
-        duration: 1.5,
-        scrollTrigger: {
-          trigger: ".paragraph2",
-          start: "top bottom",
-        },
-      });
-
-      gsap.from(".paragraph3", {
-        opacity: 0,
-        y: 100,
-        duration: 1.5,
-        scrollTrigger: {
-          trigger: ".paragraph3",
           start: "top bottom",
         },
       });

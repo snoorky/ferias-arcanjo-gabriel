@@ -30,7 +30,7 @@ export default function Hero() {
         <Countdown />
         <HeroAnimation />
         <Link
-          href="https://api.whatsapp.com/send?phone=5515997096890&text=Olá,+quero+a+vaga+do+eu+filho+no+programa+de+férias"
+          href="https://api.whatsapp.com/send?phone=5515997096890&text=Olá,+quero+a+vaga+do+meu+filho+no+programa+de+férias"
           target="_blank"
         >
           <Image

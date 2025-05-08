@@ -59,8 +59,7 @@ const faqData = [
     answer: `Oferecemos uma <strong>alimentação balanceada</strong>, com opções saudáveis para as crianças, respeitando suas necessidades <strong>nutricionais</strong> e possíveis <strong>restrições alimentares</strong>. Se seu filho tiver alguma alergia ou dieta especial, basta nos informar na inscrição.`,
   },
   {
-    question:
-      "Preciso estar matriculado no Colégio Arcanjo Gabriel para participar?",
+    question: "Preciso estar matriculado para participar?",
     answer: `Não! Nosso curso de férias é <strong>aberto ao público</strong>. Qualquer criança dentro da faixa etária permitida pode participar, mesmo que não estude no Colégio Arcanjo Gabriel.`,
   },
 ];
@@ -86,7 +85,7 @@ export function FAQ() {
               className="w-full flex justify-between items-center p-4"
               onClick={() => toggleQuestion(index)}
             >
-              <p className="text-sm font-semibold">{item.question}</p>
+              <p className="text-left text-sm font-semibold">{item.question}</p>
               {isOpen == true ? minus() : plus()}
             </button>
             {isOpen && (
