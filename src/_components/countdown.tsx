@@ -24,7 +24,7 @@ function calculateTimeLeft(targetDate: Date) {
 }
 
 export function Countdown() {
-  const targetDate = useMemo(() => new Date("2025-06-01T00:00:00"), []);
+  const targetDate = useMemo(() => new Date("2025-07-01T00:00:00"), []);
   const [timeLeft, setTimeLeft] = useState<null | ReturnType<
     typeof calculateTimeLeft
   >>(null);
@@ -49,9 +49,6 @@ export function Countdown() {
   return (
     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-white rounded-xl text-center md:text-start flex flex-col md:flex-row p-4 md:p-6 lg:p-8 gap-4 md:gap-8 w-sm md:w-2xl xl:w-5xl">
       <div className="flex md:flex-2/4 flex-col justify-center">
-        <p className="text-sm xl:text-[1rem]">
-          Aventura, diversão e aprendizado começa agora!
-        </p>
         <h2 className="text-blue font-bold text-xl md:text-lg xl:text-3xl">
           Contagem regressiva para a Temporada de Férias!
         </h2>

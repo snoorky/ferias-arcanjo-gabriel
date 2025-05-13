@@ -611,6 +611,15 @@ export function FAQAnimation() {
           start: "top bottom",
         },
       });
+      gsap.from(".item6", {
+        opacity: 0,
+        y: 100,
+        duration: 1.7,
+        scrollTrigger: {
+          trigger: ".item6",
+          start: "top bottom",
+        },
+      });
     }, "#faq");
 
     return () => ctx.revert();

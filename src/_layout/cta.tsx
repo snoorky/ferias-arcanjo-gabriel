@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function CallToAction() {
   return (
     <section
-      className="responsive marginBlock pb-[26rem] md:pb-[34rem] xl:pb-32 relative overflow-hidden"
+      className="responsive marginBlock pb-[24rem] md:pb-[34rem] xl:pb-32 relative overflow-hidden"
       id="cta"
     >
       <div className="flex flex-col items-center xl:items-start space-y-4 text-center xl:text-start xl:w-1/2">
@@ -15,8 +15,7 @@ export default function CallToAction() {
         <p className="paragraph mb-4">
           Cada atividade do nosso programa de férias foi pensada com muito
           cuidado para estimular o desenvolvimento emocional, social e criativo
-          das crianças. Garanta a vaga do seu filho e proporcione a ele uma
-          experiência de férias rica em afeto e aprendizado.
+          das crianças.
         </p>
         <Button />
         <p className="footerline text-sm">

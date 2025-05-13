@@ -92,15 +92,15 @@ export function Testimonial() {
       </div>
       <button
         onClick={handlePrev}
-        className="absolute -left-5 top-1/2 -translate-y-1/2 text-blue p-3 bg-white shadow-soft rounded-full hover:bg-blue/10"
+        className="absolute -left-2 top-1/2 -translate-y-1/2 px-2 py-4 bg-white/80 rounded-l-md shadow-soft"
       >
-        ◀
+        ←
       </button>
       <button
         onClick={handleNext}
-        className="absolute -right-5 top-1/2 -translate-y-1/2 text-blue p-3 bg-white shadow-soft rounded-full hover:bg-blue/10"
+        className="absolute -right-2 top-1/2 -translate-y-1/2 px-2 py-4 bg-white/80 rounded-r-md shadow-soft"
       >
-        ▶
+        →
       </button>
     </div>
   );
