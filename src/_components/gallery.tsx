@@ -78,7 +78,7 @@ export function JustifiedGallery() {
         <div className="relative flex items-center">
           <button
             onClick={handlePrev}
-            className="absolute -left-8 z-10 px-2 py-4 bg-white/80 rounded-r-md shadow-soft"
+            className="absolute left-0 z-10 px-2 py-4 bg-white/75 rounded-r-md shadow-soft"
           >
             ←
           </button>
@@ -109,7 +109,7 @@ export function JustifiedGallery() {
           </div>
           <button
             onClick={handleNext}
-            className="absolute -right-8 z-10 px-2 py-4 bg-white/80 rounded-l-md shadow-soft"
+            className="absolute right-0 z-10 px-2 py-4 bg-white/75 rounded-l-md shadow-soft"
           >
             →
           </button>
