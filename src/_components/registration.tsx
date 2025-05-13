@@ -26,6 +26,7 @@ export default function Registration() {
           src="/kids.png"
           alt="Crianças brincando"
           fill
+          priority
           className="object-contain"
         />
       </div>

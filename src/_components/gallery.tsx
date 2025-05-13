@@ -35,7 +35,7 @@ export function JustifiedGallery() {
       const child = container.children[index] as HTMLElement;
       if (child) {
         container.scrollTo({
-          left: child.offsetLeft - 16, // Ajuste por conta do padding-x
+          left: child.offsetLeft - 16,
           behavior: "smooth",
         });
         setCurrentIndex(index);
@@ -98,9 +98,9 @@ export function JustifiedGallery() {
                 >
                   <Image
                     src={photo.src}
-                    alt={`Image ${index}`}
+                    alt={`Image${index}`}
                     fill
-                    className="object-cover"
+                    className={`object-cover item${index}`}
                     loading="lazy"
                   />
                 </div>
@@ -126,8 +126,8 @@ export function JustifiedGallery() {
                 src={photo.src}
                 width={width}
                 height={rowHeight}
-                alt={`Image ${index}`}
-                className="object-cover rounded-xl shadow-soft"
+                alt={`Image${index}`}
+                className={`object-cover rounded-xl shadow-soft item${index}`}
                 loading="lazy"
               />
             );

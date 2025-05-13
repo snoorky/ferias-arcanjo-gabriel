@@ -8,6 +8,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function HeroAnimation() {
   useEffect(() => {
+    const el = document.querySelector("#hero");
+    if (!el) return;
+
     const ctx = gsap.context(() => {
       gsap.from(".logo", {
         opacity: 0,
@@ -57,6 +60,9 @@ export function HeroAnimation() {
 
 export function BenefitsAnimation() {
   useEffect(() => {
+    const el = document.querySelector("#benefits");
+    if (!el) return;
+
     const ctx = gsap.context(() => {
       gsap.from(".title", {
         opacity: 0,
@@ -131,6 +137,9 @@ export function BenefitsAnimation() {
 
 export function ActivitiesAnimation() {
   useEffect(() => {
+    const el = document.querySelector("#activities");
+    if (!el) return;
+
     const ctx = gsap.context(() => {
       gsap.from(".title", {
         opacity: 0,
@@ -244,6 +253,9 @@ export function ActivitiesAnimation() {
 
 export function AboutAnimation() {
   useEffect(() => {
+    const el = document.querySelector("#about");
+    if (!el) return;
+
     const ctx = gsap.context(() => {
       gsap.from(".title", {
         opacity: 0,
@@ -275,12 +287,12 @@ export function AboutAnimation() {
         },
       });
 
-      gsap.from(".video", {
+      gsap.from(".picture", {
         opacity: 0,
         y: 100,
         duration: 1.9,
         scrollTrigger: {
-          trigger: ".video",
+          trigger: ".picture",
           start: "top bottom",
         },
       });
@@ -491,6 +503,9 @@ export function AboutAnimation() {
 
 export function TestimonialAnimation() {
   useEffect(() => {
+    const el = document.querySelector("#testimonial");
+    if (!el) return;
+
     const ctx = gsap.context(() => {
       gsap.from(".title", {
         opacity: 0,
@@ -543,6 +558,9 @@ export function TestimonialAnimation() {
 
 export function FAQAnimation() {
   useEffect(() => {
+    const el = document.querySelector("#faq");
+    if (!el) return;
+
     const ctx = gsap.context(() => {
       gsap.from(".title", {
         opacity: 0,
@@ -630,6 +648,9 @@ export function FAQAnimation() {
 
 export function CTAAnimation() {
   useEffect(() => {
+    const el = document.querySelector("#cta");
+    if (!el) return;
+
     const ctx = gsap.context(() => {
       gsap.from(".limited", {
         opacity: 0,
@@ -666,7 +687,7 @@ export function CTAAnimation() {
         y: 100,
         duration: 1.5,
         scrollTrigger: {
-          trigger: ".paragraph1",
+          trigger: ".paragraph",
           start: "top bottom",
         },
       });

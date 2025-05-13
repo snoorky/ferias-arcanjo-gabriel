@@ -80,7 +80,7 @@ export function Testimonial() {
         {getVisibleTestimonials().map((item, index) => (
           <div
             key={index}
-            className="p-4 shadow-soft rounded-xl border-t-6 border-blue space-y-4 bg-white"
+            className={`p-4 shadow-soft rounded-xl border-t-6 border-blue space-y-4 bg-white item${index}`}
           >
             <div className="flex items-center justify-between">
               {quote()} <Stars rating={item.rate} />

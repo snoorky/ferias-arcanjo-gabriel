@@ -9,7 +9,7 @@ export default function About() {
     >
       <div className="flex flex-col xl:flex-row gap-8">
         <div
-          className="w-full md:w-4/6 m-auto h-60 lg:h-80 bg-cover bg-center rounded-xl"
+          className="picture w-full md:w-4/6 m-auto h-60 lg:h-80 bg-cover bg-center rounded-xl"
           style={{ backgroundImage: "url('/colegio.jpg')" }}
         ></div>
         <div className="space-y-2 xl:w-2/3 xl:space-y-4 xl:text-start">
