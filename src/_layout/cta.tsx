@@ -15,7 +15,8 @@ export default function CallToAction() {
         <p className="paragraph mb-4">
           Cada atividade do nosso programa de férias foi pensada com muito
           cuidado para estimular o desenvolvimento emocional, social e criativo
-          das crianças.
+          das crianças. Não perca a oportunidade de proporcionar ao seu filho(a)
+          uma experiência de férias rica em afeto e aprendizado.
         </p>
         <Button />
         <p className="footerline text-sm">
