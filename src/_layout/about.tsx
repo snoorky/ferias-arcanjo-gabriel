@@ -9,7 +9,7 @@ export default function About() {
       id="about"
     >
       <div className="flex flex-col xl:flex-row gap-8">
-        <div className="picture w-full md:w-4/6 m-auto h-60 lg:h-80 rounded-xl overflow-hidden">
+        <div className="picture w-full md:w-4/6 m-auto h-60 lg:h-80 rounded-xl overflow-hidden relative">
           <Image
             src="/colegio.jpg"
             alt="Crianças do Colégio Arcanjo Gabriel"

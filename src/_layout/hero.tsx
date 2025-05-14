@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <div className="relative">
-      <main className="w-screen h-full overflow-hidden">
+      <main className="relative w-screen h-full overflow-hidden">
         <Image
           src="/banner.webp"
           alt="Banner de férias Colégio Arcanjo Gabriel"
