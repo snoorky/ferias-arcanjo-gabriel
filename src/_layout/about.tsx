@@ -1,5 +1,6 @@
 import { AboutAnimation } from "@/app/animations";
 import { JustifiedGallery } from "@/_components/gallery";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -8,10 +9,16 @@ export default function About() {
       id="about"
     >
       <div className="flex flex-col xl:flex-row gap-8">
-        <div
-          className="picture w-full md:w-4/6 m-auto h-60 lg:h-80 bg-cover bg-center rounded-xl"
-          style={{ backgroundImage: "url('/colegio.jpg')" }}
-        ></div>
+        <div className="picture w-full md:w-4/6 m-auto h-60 lg:h-80 rounded-xl overflow-hidden">
+          <Image
+            src="/colegio.jpg"
+            alt="Crianças do Colégio Arcanjo Gabriel"
+            fill
+            quality={80}
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+        </div>
         <div className="space-y-2 xl:w-2/3 xl:space-y-4 xl:text-start">
           <h4 className="subtitle font-bold -mb-1 text-green">Colégio</h4>
           <h2 className="title text-blue">Arcanjo Gabriel</h2>

@@ -31,12 +31,17 @@ export default function Footer() {
         2025 © Colégio Arcanjo Gabriel. Todos os direitos reservados
       </p>
       <div className="flex gap-4">
-        <Link href="http://facebook.com/colegioarcanjogabriel" target="_blank">
+        <Link
+          href="http://facebook.com/colegioarcanjogabriel"
+          target="_blank"
+          aria-label="Facebook"
+        >
           {facebook()}
         </Link>
         <Link
           href="https://www.instagram.com/colegioarcanjogabriel"
           target="_blank"
+          aria-label="Instagram"
         >
           {instagram()}
         </Link>
