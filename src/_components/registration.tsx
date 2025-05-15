@@ -14,7 +14,7 @@ export default function Registration() {
           férias na compra da matrícula ou contraturno!
         </p>
         <Link
-          href={`https://api.whatsapp.com/send?phone=5515997096890&text=${text}`}
+          href={`https://api.whatsapp.com/send?phone=5515981619803&text=${text}`}
           target="_blank"
           className="py-4 px-4 font-semibold rounded-xl bg-green text-white"
         >

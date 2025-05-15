@@ -36,7 +36,7 @@ export default function Hero() {
           </div>
           <HeroAnimation />
           <Link
-            href="https://api.whatsapp.com/send?phone=5515997096890&text=Olá!+Tenho+interesse+no+Curso+de+Férias+do+Colégio+Arcanjo+Gabriel.+Poderiam+me+enviar+mais+detalhes,+por+favor?"
+            href="https://api.whatsapp.com/send?phone=5515981619803&text=Olá!+Tenho+interesse+no+Curso+de+Férias+do+Colégio+Arcanjo+Gabriel.+Poderiam+me+enviar+mais+detalhes,+por+favor?"
             target="_blank"
           >
             <Image
