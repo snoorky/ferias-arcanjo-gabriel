@@ -61,7 +61,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
         {/* Google Tag */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-9S63V4LYRK"
+          src="https://www.googletagmanager.com/gtag/js?id=G-VXELMC56WP"
           strategy="afterInteractive"
         />
         <Script id="gtag-init" strategy="afterInteractive">
@@ -69,7 +69,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-9S63V4LYRK', {
+            gtag('config', 'G-VXELMC56WP', {
             page_path: window.location.pathname,
             });
           `}
