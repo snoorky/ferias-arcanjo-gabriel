@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Férias no Colégio Arcanjo Gabriel | Brincar, Aprender e se Encantar",
@@ -54,7 +55,22 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <head>
-        <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+        <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-9S63V4LYRK"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-9S63V4LYRK', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
       </head>
       <body className="antialiased">
         {children}
