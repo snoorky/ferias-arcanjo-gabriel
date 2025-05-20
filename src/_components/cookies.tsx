@@ -1,8 +1,16 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 "use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
 
 export default function CookieConsentBanner() {
   const [show, setShow] = useState(false);
@@ -12,15 +20,39 @@ export default function CookieConsentBanner() {
     const consent = localStorage.getItem("cookieConsent");
     if (!consent) {
       setShow(true);
-    } else {
+      initializeConsentMode("denied");
+    } else if (consent === "accepted") {
+      initializeConsentMode("granted");
       loadGTM();
+    } else {
+      initializeConsentMode("denied");
     }
   }, []);
 
   if (pathname === "/politica-privacidade") return null;
 
+  const initializeConsentMode = (status: "granted" | "denied") => {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(...args: any[]) {
+      window.dataLayer.push(args);
+    }
+    gtag("consent", "default", {
+      ad_storage: "denied",
+      analytics_storage: "denied",
+    });
+    if (status === "granted") {
+      gtag("consent", "update", {
+        ad_storage: "granted",
+        analytics_storage: "granted",
+      });
+    }
+  };
+
   const loadGTM = () => {
+    if (document.getElementById("gtm-script")) return;
+
     const gtmScript = document.createElement("script");
+    gtmScript.id = "gtm-script";
     gtmScript.innerHTML = `
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -55,9 +87,16 @@ export default function CookieConsentBanner() {
   };
 
   const acceptCookies = () => {
-    localStorage.setItem("cookieConsent", "true");
+    localStorage.setItem("cookieConsent", "accepted");
     setShow(false);
+    initializeConsentMode("granted");
     loadGTM();
+  };
+
+  const declineCookies = () => {
+    localStorage.setItem("cookieConsent", "declined");
+    setShow(false);
+    initializeConsentMode("denied");
   };
 
   if (!show) return null;
@@ -84,10 +123,16 @@ export default function CookieConsentBanner() {
                 Política de Privacidade
               </Link>
             </p>
-            <div className="mt-4 lg:mt-0 flex">
+            <div className="mt-4 lg:mt-0 flex gap-2">
+              <button
+                onClick={declineCookies}
+                className="bg-gray-300 text-gray-800 text-sm font-medium px-4 py-2 rounded-lg transition-colors"
+              >
+                Recusar
+              </button>
               <button
                 onClick={acceptCookies}
-                className="bg-blue-600 w-full text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
+                className="bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
               >
                 Aceitar
               </button>
