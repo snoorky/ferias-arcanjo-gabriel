@@ -27,8 +27,15 @@ const instagram = () => (
 export default function Footer() {
   return (
     <footer className="responsive flex items-center md:justify-between py-6 bg-blue text-white gap-4">
-      <p className="font-semibold">
-        2025 © Colégio Arcanjo Gabriel. Todos os direitos reservados
+      <p className="font-semibold md:max-w-lg lg:max-w-full">
+        2025 © Colégio Arcanjo Gabriel. Todos os direitos reservados.
+        Desenvolvido por{" "}
+        <Link
+          href={"https://api.whatsapp.com/send?phone=5515997042300"}
+          target="_blank"
+        >
+          Raphael
+        </Link>
       </p>
       <div className="flex gap-4">
         <Link
